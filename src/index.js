@@ -5,19 +5,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 class Message extends React.Component {
-    constructor(props){
-        super(props);
-
-        this.state = {
-            text: 'variant c'
-        }
-
-    }
-
     render() {
         return(
             <div>Hello developer {this.props.name}</div>
-
         );
     }
 }
@@ -25,7 +15,7 @@ class Message extends React.Component {
 var mountNode = document.getElementById("message");
 
 ReactDOM.render(
-    <Message name="Lubomir"/>,
+    <Message name="Lubomir" />,
     mountNode
 );
 

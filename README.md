@@ -66,4 +66,3 @@ k| package.json /* "scripts": {
                      */
 l| terminal: npm run build
 m| open index.html in browser
-n| if you use files then create repository, clone it and paste in directory files. After that terminal: npm install
