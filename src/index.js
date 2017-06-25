@@ -16,9 +16,7 @@ class Message extends React.Component {
 
     render() {
         return(
-            {/*<div>Hello developer {this.props.name}</div>*/},
-            {/*<h1>{ this.props.children }</h1>*/},
-            <h1>{ this.state.text }</h1>
+            <div>Hello developer {this.props.name}</div>
 
         );
     }
@@ -27,8 +25,7 @@ class Message extends React.Component {
 var mountNode = document.getElementById("message");
 
 ReactDOM.render(
-
-        <Message/>,
+    <Message name="Lubomir"/>,
     mountNode
 );
 
