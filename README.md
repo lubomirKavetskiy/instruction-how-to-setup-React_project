@@ -36,9 +36,10 @@ f| create public/index.html /* <!DOCTYPE html>
                                                    mountNode
                                                );
                                                */
-g| terminal: npm install --save-dev webpack babel-loader babel-core babel-preset-es2015 babel-preset-react react react-dom
-h| create .gitignore file
-i| create webpack.config.js /* const webpack = require('webpack');
+g| terminal: npm install --save-dev webpack babel-loader babel-core babel-preset-es2015 babel-preset-react
+h| terminal: npm install --save react react-dom
+i| create .gitignore file
+j| create webpack.config.js /* const webpack = require('webpack');
                             const path = require('path');
 
                             const config = {
@@ -59,10 +60,10 @@ i| create webpack.config.js /* const webpack = require('webpack');
                             };
                             module.exports = config;
                             */
-j| create .babelrc /* { "presets": ["es2015", "react"] } */
-k| package.json /* "scripts": {
+k| create .babelrc /* { "presets": ["es2015", "react"] } */
+l| package.json /* "scripts": {
                       "build": "webpack"
                     },
                      */
-l| terminal: npm run build
-m| open index.html in browser
+m| terminal: npm run build
+n| open index.html in browser
