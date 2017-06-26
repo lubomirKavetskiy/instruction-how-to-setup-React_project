@@ -15,7 +15,7 @@ class Message extends React.Component {
 var mountNode = document.getElementById("message");
 
 ReactDOM.render(
-    <Message name="Lubomir" />,
+    <Message name="Lubomir2017" />,
     mountNode
 );
 

@@ -4,7 +4,7 @@
   "description": "a| create GitHub repository and clone it using https\r b| open in IDE project (using GIT Versoion control)\r c| terminal: npm init => package.json\r d| add package.json to Git* (open package.json in Notepad++ IDE =>edit =>EOL Conversion => Convert to Windows* Format)\r e| create two directories: public and src\r f| create public/index.html /* <!DOCTYPE html>\r                                <html>\r                                    <head>\r                                        <meta charset=\"UTF-8\">\r                                        <title>Title</title>\r                                    </head>\r                                    <body>\r                                        <div id=\"message\"></div>",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack",
+    "server": "webpack-dev-server --content-base ./public --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +22,9 @@
     "babel-loader": "^7.1.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^3.0.0"
+    "react-hot-loader": "^1.3.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
     "react": "^15.6.1",

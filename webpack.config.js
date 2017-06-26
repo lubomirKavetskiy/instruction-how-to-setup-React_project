@@ -1,23 +1,22 @@
 /**
  * Created by Любомир on 25.06.2017.
  */
-const webpack = require('webpack');
 const path = require('path');
 
-const config = {
+module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
     module: {
-        rules: [
+        loaders: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader'
-            }
-        ]
-    }
+                loaders: ["react-hot-loader", "babel-loader"]
+            },
+        ],
+    },
 };
-module.exports = config;
+

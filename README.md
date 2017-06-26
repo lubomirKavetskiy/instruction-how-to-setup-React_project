@@ -39,31 +39,29 @@ f| create public/index.html /* <!DOCTYPE html>
 g| terminal: npm install --save-dev webpack babel-loader babel-core babel-preset-es2015 babel-preset-react
 h| terminal: npm install --save react react-dom
 i| create .gitignore file
-j| create webpack.config.js /* const webpack = require('webpack');
-                            const path = require('path');
+j| create webpack.config.js /* const path = require('path');
 
-                            const config = {
-                                entry: './src/index.js',
-                                output: {
-                                    path: path.resolve(__dirname, 'public'),
-                                    filename: 'bundle.js'
-                                },
-                                module: {
-                                    rules: [
-                                        {
-                                            test: /\.(js|jsx)$/,
-                                            exclude: /node_modules/,
-                                            use: 'babel-loader'
-                                        }
-                                    ]
-                                }
-                            };
-                            module.exports = config;
+                               module.exports = {
+                                   entry: path.join(__dirname, 'src', 'index.js'),
+                                   output: {
+                                       path: 'public',
+                                       filename: 'bundle.js',
+                                   },
+                                   module: {
+                                       loaders: [
+                                           {
+                                               test: /\.(js|jsx)$/,
+                                               exclude: /node_modules/,
+                                               loaders: ["babel-loader"]
+                                           },
+                                       ],
+                                   },
+                               };
                             */
 k| create .babelrc /* { "presets": ["es2015", "react"] } */
-l| package.json /* "scripts": {
-                      "build": "webpack"
-                    },
-                     */
-m| terminal: npm run build
-n| open index.html in browser
+m| terminal: npm install webpack-dev-server --save-dev
+n| add to package.json: /*"build":"webpack-dev-server --content-base ./public --inline --hot"*/
+o| terminal: npm install --save-dev react-hot-loader
+p| add to webpack.config.js: loaders: ["react-hot-loader",
+r| terminal: npm run build
+s| localhost:8080
