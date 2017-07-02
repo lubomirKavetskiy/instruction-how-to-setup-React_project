@@ -65,3 +65,11 @@ o| terminal: npm install --save-dev react-hot-loader
 p| add to webpack.config.js: loaders: ["react-hot-loader",
 r| terminal: npm run build
 s| localhost:8080
+
+setting prettier:
+terminal: npm install --save-dev prettier
+see img/prettier.jpg
+WebStorm > Preferences > Keymap
+Under Keymap use the search input box to search for prettier
+Double click on Prettier and add keyboard shortcut. I am on a Mac and I personally use command + shift + p
+source: https://medium.com/@jm90mm/adding-prettier-to-webstorm-a218eeec04d2
